@@ -1,31 +1,37 @@
-package com.basics.opps.withoutConstructor;
+package com.basics.oops.withoutConstructer;
 
-public class Student {
-    // Instance Variables
-    int USN;
-    String name;
-    int marks;
-    void evaluteMarks(){
-        if (marks < 49) {
-            System.out.println(name + " has FAILED");
-        }else{
-            System.out.println(name + " has PASSED");
+    public class Student {
+        //instance variables
+        int USN;
+        String Name;
+        int marks;
+        String college ;
+        void evaluatemarks() {
+            if (marks < 66) {
+                System.out.println(Name +" he is a shit");
+            } else {
+                System.out.println(Name +"he is not shit");
+            }
+        }
+        void studentDetailes(){
+            System.out.println(Name+" " + USN+" "+ marks+" "+college);
+        }
+        public static void main(String[] args) {
+            // objection creation synatax ; classname.obj=new classroom()
+            Student s1 = new Student();
+            s1.USN = 101;
+            s1.Name="abhi";
+            s1.marks=99;
+            s1.college="SNPUS";
+            Student s2 =new Student();
+            s2.USN=908;
+            s2.Name="jayaakkaaaaaaa";
+            s2.marks=65;
+            s2.college="SNPUS";
+            s1.evaluatemarks();
+            s2.evaluatemarks();
+            s1.studentDetailes();
+            s2.studentDetailes();
         }
     }
 
-    static void main() {
-        // Object Creation Syntax: ClassName obj = new ClassName();
-        Student s1 = new Student(USN:101, name);
-        s1.USN =101;
-        s1.name = "Manu";
-        s1.marks = 45;
-        Student s2 = new Student();
-        s2.USN = 102;
-        s2.name = "Bharath";
-        s2.marks = 60;
-        s1.evaluteMarks();
-        s2.evaluteMarks();
-
-
-    }
-}
