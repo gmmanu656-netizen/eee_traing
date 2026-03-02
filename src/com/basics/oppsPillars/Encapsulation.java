@@ -11,4 +11,5 @@ public class Encapsulation {
         this.email = email;
     }
     // getters
+
 }
